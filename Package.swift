@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "OktaOidc", targets: ["OktaOidc"])
     ],
     targets: [
-        .target(name: "OktaOidc", dependencies: [], path: "Okta/OktaOidc"),
+        .target(name: "OktaOidc", dependencies: [], path: "Okta/OktaOidc", exclude: ["OktaOidc.h"]),
         .testTarget(name: "OktaTests", dependencies: ["OktaOidc"], path: "Tests/OktaOidc")
     ]
 )
